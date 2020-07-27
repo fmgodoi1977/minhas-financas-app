@@ -1,7 +1,10 @@
 import axios from 'axios';
 
 const httpClient = axios.create({
-    baseURL: 'https://financas-spring-api.herokuapp.com'
+    baseURL: 'https://cors-anywhere.herokuapp.com/https://financas-spring-api.herokuapp.com',
+    headers: {
+        'Access-Control-Allow-Origin': '*'
+    }
 });
 
 class ApiService {
